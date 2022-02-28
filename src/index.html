@@ -5,13 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
 
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
+  
   <title>react-mapuest</title>
 </head>
 
 <body>
   <div id="root"></div>
+
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic3BlbmNlcmVhZ2xldG9uIiwiYSI6ImNsMDMzY3dseDEweTUza25wdWV4bGp3dzIifQ.WZ-7chn7os309g1gYDjLqQ';
+const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    center: [-122.6, 45.5], // starting position [lng, lat]
+    zoom: 12 // starting zoom
+});
+</script>
 </body>
 
 </html>
